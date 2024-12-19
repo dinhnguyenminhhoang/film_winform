@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e8765dae1c344fe68bf0a9b9fa6b8c29" Name="Diagram1">
+        <EntityTypeShape EntityType="FilmDBModel.Comments" Width="1.5" PointX="8.25" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FilmDBModel.Countries" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="FilmDBModel.Episodes" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="FilmDBModel.Films" Width="1.5" PointX="3" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FilmDBModel.Follows" Width="1.5" PointX="8.25" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FilmDBModel.Genres" Width="1.5" PointX="5.25" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FilmDBModel.Notifications" Width="1.5" PointX="5.25" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FilmDBModel.Roles" Width="1.5" PointX="5.25" PointY="22.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FilmDBModel.Users" Width="1.5" PointX="7.5" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FilmDBModel.ViewLogs" Width="1.5" PointX="5.25" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FilmDBModel.OTPs" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="FilmDBModel.FK__Comments__FilmId__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="FilmDBModel.FK__Comments__UserId__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="FilmDBModel.FK__Episodes__FilmId__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="FilmDBModel.FK__Follows__FilmId__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="FilmDBModel.FK__Notificat__FilmI__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="FilmDBModel.FK__ViewLogs__FilmId__6754599E" ManuallyRouted="false" />
+        <AssociationConnector Association="FilmDBModel.FK__Follows__UserId__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="FilmDBModel.FK__Users__RoleId__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="FilmDBModel.FilmCountries" ManuallyRouted="false" />
+        <AssociationConnector Association="FilmDBModel.FilmGenres" ManuallyRouted="false" />
+        <AssociationConnector Association="FilmDBModel.UserNotifications" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

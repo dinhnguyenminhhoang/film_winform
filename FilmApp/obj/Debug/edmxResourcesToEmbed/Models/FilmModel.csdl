@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FilmDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Comments">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Content" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CommentDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="FilmId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Films" Relationship="Self.FK__Comments__FilmId__5070F446" FromRole="Comments" ToRole="Films" />
+    <NavigationProperty Name="Users" Relationship="Self.FK__Comments__UserId__4F7CD00D" FromRole="Comments" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Countries">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Films" Relationship="Self.FilmCountries" FromRole="Countries" ToRole="Films" />
+  </EntityType>
+  <EntityType Name="Episodes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Link" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FilmId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Films" Relationship="Self.FK__Episodes__FilmId__4BAC3F29" FromRole="Episodes" ToRole="Films" />
+  </EntityType>
+  <EntityType Name="Films">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Poster" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Backdrop" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Trailer" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ReleaseYear" Type="Int32" Nullable="false" />
+    <Property Name="Type" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Status" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Runtime" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Quality" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="IsPopular" Type="Boolean" />
+    <Property Name="Rating" Type="Decimal" Precision="3" Scale="1" />
+    <Property Name="Viewed" Type="Int32" />
+    <NavigationProperty Name="Comments" Relationship="Self.FK__Comments__FilmId__5070F446" FromRole="Films" ToRole="Comments" />
+    <NavigationProperty Name="Episodes" Relationship="Self.FK__Episodes__FilmId__4BAC3F29" FromRole="Films" ToRole="Episodes" />
+    <NavigationProperty Name="Follows" Relationship="Self.FK__Follows__FilmId__44FF419A" FromRole="Films" ToRole="Follows" />
+    <NavigationProperty Name="Notifications" Relationship="Self.FK__Notificat__FilmI__5441852A" FromRole="Films" ToRole="Notifications" />
+    <NavigationProperty Name="ViewLogs" Relationship="Self.FK__ViewLogs__FilmId__6754599E" FromRole="Films" ToRole="ViewLogs" />
+    <NavigationProperty Name="Countries" Relationship="Self.FilmCountries" FromRole="Films" ToRole="Countries" />
+    <NavigationProperty Name="Genres" Relationship="Self.FilmGenres" FromRole="Films" ToRole="Genres" />
+  </EntityType>
+  <EntityType Name="Follows">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="FilmId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="FilmId" Type="Int32" Nullable="false" />
+    <Property Name="FollowedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Films" Relationship="Self.FK__Follows__FilmId__44FF419A" FromRole="Follows" ToRole="Films" />
+    <NavigationProperty Name="Users" Relationship="Self.FK__Follows__UserId__440B1D61" FromRole="Follows" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Genres">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Films" Relationship="Self.FilmGenres" FromRole="Genres" ToRole="Films" />
+  </EntityType>
+  <EntityType Name="Notifications">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Content" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NotificationDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FilmId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Films" Relationship="Self.FK__Notificat__FilmI__5441852A" FromRole="Notifications" ToRole="Films" />
+    <NavigationProperty Name="Users" Relationship="Self.UserNotifications" FromRole="Notifications" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Permissions" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="Self.FK__Users__RoleId__403A8C7D" FromRole="Roles" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Avatar" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RoleId" Type="Int32" />
+    <NavigationProperty Name="Comments" Relationship="Self.FK__Comments__UserId__4F7CD00D" FromRole="Users" ToRole="Comments" />
+    <NavigationProperty Name="Follows" Relationship="Self.FK__Follows__UserId__440B1D61" FromRole="Users" ToRole="Follows" />
+    <NavigationProperty Name="Roles" Relationship="Self.FK__Users__RoleId__403A8C7D" FromRole="Users" ToRole="Roles" />
+    <NavigationProperty Name="Notifications" Relationship="Self.UserNotifications" FromRole="Users" ToRole="Notifications" />
+  </EntityType>
+  <EntityType Name="ViewLogs">
+    <Key>
+      <PropertyRef Name="FilmId" />
+      <PropertyRef Name="ViewDate" />
+    </Key>
+    <Property Name="FilmId" Type="Int32" Nullable="false" />
+    <Property Name="ViewedCount" Type="Int32" />
+    <Property Name="ViewDate" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Films" Relationship="Self.FK__ViewLogs__FilmId__6754599E" FromRole="ViewLogs" ToRole="Films" />
+  </EntityType>
+  <EntityType Name="OTPs">
+    <Key>
+      <PropertyRef Name="Email" />
+      <PropertyRef Name="OtpCodeHashed" />
+      <PropertyRef Name="ExpiryTime" />
+    </Key>
+    <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OtpCodeHashed" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ExpiryTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsVerified" Type="Boolean" />
+  </EntityType>
+  <Association Name="FK__Comments__FilmId__5070F446">
+    <End Role="Films" Type="Self.Films" Multiplicity="1" />
+    <End Role="Comments" Type="Self.Comments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Films">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Comments">
+        <PropertyRef Name="FilmId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Comments__UserId__4F7CD00D">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Comments" Type="Self.Comments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Comments">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Episodes__FilmId__4BAC3F29">
+    <End Role="Films" Type="Self.Films" Multiplicity="1" />
+    <End Role="Episodes" Type="Self.Episodes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Films">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Episodes">
+        <PropertyRef Name="FilmId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Follows__FilmId__44FF419A">
+    <End Role="Films" Type="Self.Films" Multiplicity="1" />
+    <End Role="Follows" Type="Self.Follows" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Films">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Follows">
+        <PropertyRef Name="FilmId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Notificat__FilmI__5441852A">
+    <End Role="Films" Type="Self.Films" Multiplicity="1" />
+    <End Role="Notifications" Type="Self.Notifications" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Films">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Notifications">
+        <PropertyRef Name="FilmId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ViewLogs__FilmId__6754599E">
+    <End Role="Films" Type="Self.Films" Multiplicity="1" />
+    <End Role="ViewLogs" Type="Self.ViewLogs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Films">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ViewLogs">
+        <PropertyRef Name="FilmId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Follows__UserId__440B1D61">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Follows" Type="Self.Follows" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Follows">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Users__RoleId__403A8C7D">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="0..1" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FilmCountries">
+    <End Role="Countries" Type="Self.Countries" Multiplicity="*" />
+    <End Role="Films" Type="Self.Films" Multiplicity="*" />
+  </Association>
+  <Association Name="FilmGenres">
+    <End Role="Films" Type="Self.Films" Multiplicity="*" />
+    <End Role="Genres" Type="Self.Genres" Multiplicity="*" />
+  </Association>
+  <Association Name="UserNotifications">
+    <End Role="Notifications" Type="Self.Notifications" Multiplicity="*" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="FilmDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Comments" EntityType="Self.Comments" />
+    <EntitySet Name="Countries" EntityType="Self.Countries" />
+    <EntitySet Name="Episodes" EntityType="Self.Episodes" />
+    <EntitySet Name="Films" EntityType="Self.Films" />
+    <EntitySet Name="Follows" EntityType="Self.Follows" />
+    <EntitySet Name="Genres" EntityType="Self.Genres" />
+    <EntitySet Name="Notifications" EntityType="Self.Notifications" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" />
+    <EntitySet Name="Users" EntityType="Self.Users" />
+    <EntitySet Name="ViewLogs" EntityType="Self.ViewLogs" />
+    <EntitySet Name="OTPs" EntityType="Self.OTPs" />
+    <AssociationSet Name="FK__Comments__FilmId__5070F446" Association="Self.FK__Comments__FilmId__5070F446">
+      <End Role="Films" EntitySet="Films" />
+      <End Role="Comments" EntitySet="Comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Comments__UserId__4F7CD00D" Association="Self.FK__Comments__UserId__4F7CD00D">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Comments" EntitySet="Comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Episodes__FilmId__4BAC3F29" Association="Self.FK__Episodes__FilmId__4BAC3F29">
+      <End Role="Films" EntitySet="Films" />
+      <End Role="Episodes" EntitySet="Episodes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Follows__FilmId__44FF419A" Association="Self.FK__Follows__FilmId__44FF419A">
+      <End Role="Films" EntitySet="Films" />
+      <End Role="Follows" EntitySet="Follows" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Notificat__FilmI__5441852A" Association="Self.FK__Notificat__FilmI__5441852A">
+      <End Role="Films" EntitySet="Films" />
+      <End Role="Notifications" EntitySet="Notifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ViewLogs__FilmId__6754599E" Association="Self.FK__ViewLogs__FilmId__6754599E">
+      <End Role="Films" EntitySet="Films" />
+      <End Role="ViewLogs" EntitySet="ViewLogs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Follows__UserId__440B1D61" Association="Self.FK__Follows__UserId__440B1D61">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Follows" EntitySet="Follows" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Users__RoleId__403A8C7D" Association="Self.FK__Users__RoleId__403A8C7D">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FilmCountries" Association="Self.FilmCountries">
+      <End Role="Countries" EntitySet="Countries" />
+      <End Role="Films" EntitySet="Films" />
+    </AssociationSet>
+    <AssociationSet Name="FilmGenres" Association="Self.FilmGenres">
+      <End Role="Films" EntitySet="Films" />
+      <End Role="Genres" EntitySet="Genres" />
+    </AssociationSet>
+    <AssociationSet Name="UserNotifications" Association="Self.UserNotifications">
+      <End Role="Notifications" EntitySet="Notifications" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
