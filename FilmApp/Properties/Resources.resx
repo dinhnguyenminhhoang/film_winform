@@ -121,20 +121,35 @@
   <data name="email1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\email1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Начало___Бесплатно_векторы-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Начало___Бесплатно_векторы-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="6fac0f71ff09b99ab1ecd791877ab5a5-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\6fac0f71ff09b99ab1ecd791877ab5a5-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="download-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\download-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Начало___Бесплатно_векторы-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Начало___Бесплатно_векторы-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MBE_Biểu_Tượng_Cây_Cỏ_Bốn_Lá_Dễ_Thương_Vector_Dễ_Thương___Công_cụ_đồ_họa_AI_Tải_xuống_miễn_phí_-_Pikbest-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MBE_Biểu_Tượng_Cây_Cỏ_Bốn_Lá_Dễ_Thương_Vector_Dễ_Thương___Công_cụ_đồ_họa_AI_Tải_xuống_miễn_phí_-_Pikbest-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download__1_-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download__1_-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Globe_Vector_Hd_PNG_Images__Vector_Globe_Icon__Globe_Icons__Globe_Icon__World_Icon_PNG_Image_For_Free_Download-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Globe_Vector_Hd_PNG_Images__Vector_Globe_Icon__Globe_Icons__Globe_Icon__World_Icon_PNG_Image_For_Free_Download-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="homeiccon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\homeiccon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="f344cfb11133a1473fa462938f7776f3-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\f344cfb11133a1473fa462938f7776f3-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Google_Play_Store_icon-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Google_Play_Store_icon-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="filmlogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\filmlogo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Free_right_arrow_icon_png_vector_-_Pixsector__Free_vector_images__mockups__PSDs_and_photos-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Free_right_arrow_icon_png_vector_-_Pixsector__Free_vector_images__mockups__PSDs_and_photos-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="homeiccon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\homeiccon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,8 +160,17 @@
   <data name="4b6de16b3a606314de0b990f14e6fd50-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4b6de16b3a606314de0b990f14e6fd50-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Clock_Line_Vector_Design_Images__Beautiful_Clock_Vector_Line_Icon__Clock_Icons__Line_Icons__Beautiful_Icons_PNG_Image_For_Free_Download-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Clock_Line_Vector_Design_Images__Beautiful_Clock_Vector_Line_Icon__Clock_Icons__Line_Icons__Beautiful_Icons_PNG_Image_For_Free_Download-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Third_Eye_Illustration___Moonstone_Creative-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Third_Eye_Illustration___Moonstone_Creative-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Purpose_Silhouette_PNG_Transparent__Movie_Icon_Which_Is_Designed_For_All_Application_Purpose_New__New_Icons__Application_Icons__Movie_Icons_PNG_Image_For_Free_Download-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Purpose_Silhouette_PNG_Transparent__Movie_Icon_Which_Is_Designed_For_All_Application_Purpose_New__New_Icons__Application_Icons__Movie_Icons_PNG_Image_For_Free_Download-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="black_ribbon_app_icon-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\black_ribbon_app_icon-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="filmlogo-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\filmlogo-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,7 +181,10 @@
   <data name="Fotografi_Desain_Grafis_Ikon_Kamera_Template__Ikon_Kamera__Ikon_Fotografi__Ikon_Templat_PNG_dan_Vektor_dengan_Background_Transparan_untuk_Unduh_Gratis-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fotografi_Desain_Grafis_Ikon_Kamera_Template__Ikon_Kamera__Ikon_Fotografi__Ikon_Templat_PNG_dan_Vektor_dengan_Background_Transparan_untuk_Unduh_Gratis-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Free_right_arrow_icon_png_vector_-_Pixsector__Free_vector_images__mockups__PSDs_and_photos-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Free_right_arrow_icon_png_vector_-_Pixsector__Free_vector_images__mockups__PSDs_and_photos-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="f344cfb11133a1473fa462938f7776f3-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\f344cfb11133a1473fa462938f7776f3-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HD_Full_Screen_White_Icon_PNG-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HD_Full_Screen_White_Icon_PNG-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

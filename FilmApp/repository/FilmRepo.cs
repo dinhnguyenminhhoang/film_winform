@@ -42,6 +42,18 @@ namespace FilmApp.repository
                 return allFilms;
             }
         }
+        public async Task<Films> getFilmDetails(int id)
+        {
+            using (FilmDBEntities context = new FilmDBEntities())
+            {
+                var filmDetail = await context.Films
+                    .Include(f=>f.Genres)
+                    .Include(f=>f.Countries)
+                                               .SingleOrDefaultAsync(f => f.Id == id);
+                return filmDetail;
+            }
+        }
+
         public async Task<int> GetFilmCount()
         {
             using (FilmDBEntities context = new FilmDBEntities())
@@ -50,6 +62,13 @@ namespace FilmApp.repository
                 return filmCount;
             }
         }
-
+        public async Task<List<Episodes>> getEpisodesFilms(int FilmId)
+        {
+            using (FilmDBEntities context = new FilmDBEntities())
+            {
+                var  episodes= await context.Episodes.Where(e => e.FilmId == FilmId).ToListAsync();
+                return episodes;
+            }
+        }
     }
 }

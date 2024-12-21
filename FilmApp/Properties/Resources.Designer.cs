@@ -73,6 +73,47 @@ namespace FilmApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _6fac0f71ff09b99ab1ecd791877ab5a5_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("6fac0f71ff09b99ab1ecd791877ab5a5-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap black_ribbon_app_icon_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("black_ribbon_app_icon-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Clock_Line_Vector_Design_Images__Beautiful_Clock_Vector_Line_Icon__Clock_Icons__Line_Icons__Beautiful_Icons_PNG_Image_For_Free_Download_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("Clock_Line_Vector_Design_Images__Beautiful_Clock_Vector_Line_Icon__Clock_Icons__L" +
+                        "ine_Icons__Beautiful_Icons_PNG_Image_For_Free_Download-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap download__1__removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("download__1_-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap download_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("download-removebg-preview", resourceCulture);
@@ -156,6 +197,37 @@ namespace FilmApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Globe_Vector_Hd_PNG_Images__Vector_Globe_Icon__Globe_Icons__Globe_Icon__World_Icon_PNG_Image_For_Free_Download_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("Globe_Vector_Hd_PNG_Images__Vector_Globe_Icon__Globe_Icons__Globe_Icon__World_Ico" +
+                        "n_PNG_Image_For_Free_Download-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Google_Play_Store_icon_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("Google_Play_Store_icon-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap HD_Full_Screen_White_Icon_PNG_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("HD_Full_Screen_White_Icon_PNG-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap homeiccon {
             get {
                 object obj = ResourceManager.GetObject("homeiccon", resourceCulture);
@@ -176,11 +248,32 @@ namespace FilmApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap MBE_Biểu_Tượng_Cây_Cỏ_Bốn_Lá_Dễ_Thương_Vector_Dễ_Thương___Công_cụ_đồ_họa_AI_Tải_xuống_miễn_phí___Pikbest_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("MBE_Biểu_Tượng_Cây_Cỏ_Bốn_Lá_Dễ_Thương_Vector_Dễ_Thương___Công_cụ_đồ_họa_AI_Tải_x" +
+                        "uống_miễn_phí_-_Pikbest-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Purpose_Silhouette_PNG_Transparent__Movie_Icon_Which_Is_Designed_For_All_Application_Purpose_New__New_Icons__Application_Icons__Movie_Icons_PNG_Image_For_Free_Download_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("Purpose_Silhouette_PNG_Transparent__Movie_Icon_Which_Is_Designed_For_All_Applicat" +
                         "ion_Purpose_New__New_Icons__Application_Icons__Movie_Icons_PNG_Image_For_Free_Do" +
                         "wnload-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Third_Eye_Illustration___Moonstone_Creative_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("Third_Eye_Illustration___Moonstone_Creative-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

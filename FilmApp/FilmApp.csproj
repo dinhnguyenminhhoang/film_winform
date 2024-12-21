@@ -12,6 +12,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -39,10 +41,20 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.2903.40, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.2903.40\lib\net462\Microsoft.Web.WebView2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.WinForms, Version=1.0.2903.40, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.2903.40\lib\net462\Microsoft.Web.WebView2.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Wpf, Version=1.0.2903.40, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.2903.40\lib\net462\Microsoft.Web.WebView2.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
       <Private>True</Private>
@@ -82,6 +94,15 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Vlc.DotNet.Core, Version=3.1.0.0, Culture=neutral, PublicKeyToken=84529da31f4eb963, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vlc.DotNet.Core.3.1.0\lib\net45\Vlc.DotNet.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Vlc.DotNet.Core.Interops, Version=3.1.0.0, Culture=neutral, PublicKeyToken=84529da31f4eb963, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vlc.DotNet.Core.Interops.3.1.0\lib\net45\Vlc.DotNet.Core.Interops.dll</HintPath>
+    </Reference>
+    <Reference Include="Vlc.DotNet.Forms, Version=3.1.0.0, Culture=neutral, PublicKeyToken=84529da31f4eb963, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vlc.DotNet.Forms.3.1.0\lib\net45\Vlc.DotNet.Forms.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Forms\AuthForms\Login.cs">
@@ -96,6 +117,12 @@
     <Compile Include="Forms\AuthForms\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Layout\UserLayoutbase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Layout\UserLayoutbase.Designer.cs">
+      <DependentUpon>UserLayoutbase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MainForms\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +134,12 @@
     </Compile>
     <Compile Include="Forms\UserForms\FilmDetail.Designer.cs">
       <DependentUpon>FilmDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserForms\FullScreenFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserForms\FullScreenFilm.Designer.cs">
+      <DependentUpon>FullScreenFilm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\UserForms\Home.cs">
       <SubType>Form</SubType>
@@ -183,17 +216,27 @@
     <Compile Include="untils\SPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="untils\untilsFnc.cs" />
     <EmbeddedResource Include="Forms\AuthForms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AuthForms\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Layout\UserLayoutbase.resx">
+      <DependentUpon>UserLayoutbase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserForms\FilmDetail.resx">
       <DependentUpon>FilmDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserForms\FullScreenFilm.resx">
+      <DependentUpon>FullScreenFilm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserForms\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserForms\WatchingFilm.resx">
+      <DependentUpon>WatchingFilm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -237,6 +280,15 @@
       <DependentUpon>FilmModel.edmx</DependentUpon>
       <LastGenOutput>FilmModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\HD_Full_Screen_White_Icon_PNG-removebg-preview.png" />
+    <None Include="Resources\download__1_-removebg-preview.png" />
+    <None Include="Resources\Globe_Vector_Hd_PNG_Images__Vector_Globe_Icon__Globe_Icons__Globe_Icon__World_Icon_PNG_Image_For_Free_Download-removebg-preview.png" />
+    <None Include="Resources\black_ribbon_app_icon-removebg-preview.png" />
+    <None Include="Resources\MBE_Biểu_Tượng_Cây_Cỏ_Bốn_Lá_Dễ_Thương_Vector_Dễ_Thương___Công_cụ_đồ_họa_AI_Tải_xuống_miễn_phí_-_Pikbest-removebg-preview.png" />
+    <None Include="Resources\6fac0f71ff09b99ab1ecd791877ab5a5-removebg-preview.png" />
+    <None Include="Resources\Clock_Line_Vector_Design_Images__Beautiful_Clock_Vector_Line_Icon__Clock_Icons__Line_Icons__Beautiful_Icons_PNG_Image_For_Free_Download-removebg-preview.png" />
+    <None Include="Resources\Third_Eye_Illustration___Moonstone_Creative-removebg-preview.png" />
+    <None Include="Resources\Google_Play_Store_icon-removebg-preview.png" />
     <None Include="Resources\Free_right_arrow_icon_png_vector_-_Pixsector__Free_vector_images__mockups__PSDs_and_photos-removebg-preview.png" />
     <None Include="Resources\f344cfb11133a1473fa462938f7776f3-removebg-preview.png" />
     <None Include="Resources\Начало___Бесплатно_векторы-removebg-preview.png" />
@@ -257,4 +309,11 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Web.WebView2.1.0.2903.40\build\Microsoft.Web.WebView2.targets" Condition="Exists('..\packages\Microsoft.Web.WebView2.1.0.2903.40\build\Microsoft.Web.WebView2.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Web.WebView2.1.0.2903.40\build\Microsoft.Web.WebView2.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Web.WebView2.1.0.2903.40\build\Microsoft.Web.WebView2.targets'))" />
+  </Target>
 </Project>

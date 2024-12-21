@@ -1,134 +1,86 @@
 ﻿using FilmApp.Forms.AuthForms;
+using FilmApp.Forms.Layout;
+using FilmApp.repository;
+using FilmApp.Utils;
 using System;
 using System.Drawing;
+using System.Linq;
+using System.Reflection.Emit;
 using System.Windows.Forms;
 
 namespace FilmApp.Forms.UserForms
 {
-    public partial class FilmDetail : Form
+    public partial class filmImage : UserLayoutbase
     {
         public int FilmId { get; set; }
-        public FilmDetail(int filmId)
+        
+        private readonly FilmRepo _filmRepo;
+        private readonly UtilsFnc _utilsFnc;
+        public filmImage(int filmId)
         {
             InitializeComponent();
+            _filmRepo = new FilmRepo();
+            _utilsFnc = new UtilsFnc();
             this.FilmId = filmId;
         }
 
         private void FilmDetail_Load(object sender, EventArgs e)
         {
-            this.CreateHeader();
             LoadFilmDetails();
         }
 
-        private void LoadFilmDetails()
+        private async void LoadFilmDetails()
         {
+            var filmDetail = await _filmRepo.getFilmDetails(this.FilmId);
+            if (filmDetail.Id > 0) {
+                System.Windows.Forms.Label filmDesLabell = new System.Windows.Forms.Label()
+                {
+                    ForeColor = Color.White,
+                    Dock = DockStyle.Top,
+                    Text = filmDetail.Content,
+                    AutoSize = true,
+                    MaximumSize = new Size(this.panelDes.Width, 0),
+                    TextAlign = ContentAlignment.TopLeft
+                };
+                this.panelDes.Controls.Add(filmDesLabell);
+                await _utilsFnc.LoadImageAsync(filmDetail.Poster, this.filmBackground);
+                this.filmStatus.Text = filmDetail.Status;
+                this.filmTime.Text = filmDetail.Runtime;
+                this.filmViewed.Text = filmDetail.Viewed.ToString() + " " + "Lượt Xem";
+                this.filmYear.Text ="Năm" + " " + filmDetail.ReleaseYear.ToString();
+                this.filmRating.Text = filmDetail.Rating.ToString() + " " +"SAO";
+                this.filmName.Text = filmDetail.Name;
+                this.filmGenres.Text = filmDetail.Genres != null && filmDetail.Genres.Any()
+                    ? string.Join(" - ", filmDetail.Genres.Select(g => g.Name))
+                    : "Đang cập nhật";
+
+                this.filmCountry.Text = filmDetail.Countries != null && filmDetail.Countries.Any()
+                    ? string.Join(" - ", filmDetail.Countries.Select(c => c.Name))
+                    : "Đang cập nhật";
+            }
         }
-        private void CreateHeader()
+        private void panel7_Paint(object sender, PaintEventArgs e)
         {
-            // Lớp ngoài
-            Panel outerPanel = new Panel
-            {
-                Dock = DockStyle.Top,
-                Height = 100,
-                BackColor = ColorTranslator.FromHtml("#1B2D3C") // Màu nền cho lớp ngoài
-            };
 
-            // Lớp bên trong
-            Panel innerPanel = new Panel
-            {
-                Width = (int)(this.Width * 0.6), // 60% chiều ngang
-                Height = 60,
-                Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right,
-                BackColor = Color.Transparent // Không màu, để nhìn xuyên qua lớp ngoài
-            };
-
-            outerPanel.Resize += (s, e) =>
-            {
-                innerPanel.Width = (int)(outerPanel.Width * 0.6);
-                innerPanel.Location = new Point((outerPanel.Width - innerPanel.Width) / 2, (outerPanel.Height - innerPanel.Height) / 2); // Căn giữa
-            };
-
-            TableLayoutPanel headerPanel = new TableLayoutPanel
-            {
-                Dock = DockStyle.Fill,
-                BackColor = Color.Transparent,
-                ColumnCount = 3
-            };
-
-            headerPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20));
-            headerPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50));
-            headerPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20));
-            PictureBox logo = new PictureBox
-            {
-                Image = Image.FromFile("D:\\workspace\\project\\FilmApp\\FilmApp\\Resources\\filmlogo-removebg-preview.png"),
-                SizeMode = PictureBoxSizeMode.Zoom,
-                Dock = DockStyle.Fill,
-                Width = 100,
-                Height = 60,
-                Margin = new Padding(0, 0, 0, 40)
-            };
-
-            TextBox searchBox = new TextBox
-            {
-                Dock = DockStyle.Fill,
-                Margin = new Padding(10, 20, 10, 20),
-                Font = new Font("Arial", 12)
-            };
-
-            // Panel chứa nút
-            FlowLayoutPanel buttonPanel = new FlowLayoutPanel
-            {
-                Dock = DockStyle.Fill,
-                FlowDirection = FlowDirection.RightToLeft,
-                Margin = new Padding(0, 10, 0, 0)
-            };
-
-            Button loginButton = new Button
-            {
-                Text = "Login",
-                Width = 80,
-                Height = 30,
-                Margin = new Padding(5),
-                Cursor = Cursors.Hand,
-                ForeColor = Color.White,
-                BackColor = ColorTranslator.FromHtml("#34495E")
-            };
-            loginButton.Click += LoginButton_Click;
-            Button registerButton = new Button
-            {
-                Text = "Register",
-                Width = 80,
-                Height = 30,
-                Margin = new Padding(5),
-                Cursor = Cursors.Hand,
-                ForeColor = Color.White,
-                BackColor = ColorTranslator.FromHtml("#2ECC71")
-            };
-            registerButton.Click += RegisterButton_Click;
-            buttonPanel.Controls.Add(registerButton);
-            buttonPanel.Controls.Add(loginButton);
-
-            // Thêm các thành phần vào headerPanel
-            headerPanel.Controls.Add(logo, 0, 0);
-            headerPanel.Controls.Add(searchBox, 1, 0);
-            headerPanel.Controls.Add(buttonPanel, 2, 0);
-
-            innerPanel.Controls.Add(headerPanel);
-            outerPanel.Controls.Add(innerPanel);
-            this.Controls.Add(outerPanel);
         }
-        private void LoginButton_Click(object sender, EventArgs e)
+
+        private void sPanel2_Paint(object sender, PaintEventArgs e)
         {
-            Login loginForm = new Login();
-            loginForm.Show();
-            this.Hide();
+
         }
-        private void RegisterButton_Click(object sender, EventArgs e)
+
+        private void trailerLable_Click(object sender, EventArgs e)
         {
-            Register registerForm = new Register();
-            registerForm.Show();
+            WatchingFilm watchingFilmForm = new WatchingFilm(FilmId,"trailer");
+            watchingFilmForm.Show();
             this.Hide();
         }
 
+        private void WatchLabel_Click(object sender, EventArgs e)
+        {
+            WatchingFilm watchingFilmForm = new WatchingFilm(FilmId,"video");
+            watchingFilmForm.Show();
+            this.Hide();
+        }
     }
 }

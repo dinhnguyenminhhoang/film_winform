@@ -1,0 +1,5 @@
+2024/12/21-23:47:36.635 3390 Reusing MANIFEST D:\workspace\project\FilmApp\FilmApp\bin\Debug\FilmApp.exe.WebView2\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
+2024/12/21-23:47:36.644 3390 Recovering log #3
+2024/12/21-23:47:36.646 3390 Reusing old log D:\workspace\project\FilmApp\FilmApp\bin\Debug\FilmApp.exe.WebView2\EBWebView\Default\Local Storage\leveldb/000003.log 
+2024/12/21-23:47:44.326 3ff4 Level-0 table #5: started
+2024/12/21-23:47:44.331 3ff4 Level-0 table #5: 9841 bytes OK
